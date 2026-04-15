@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs
+logs/
+*.log
+
+# Saved models
+saved_model/
+
+# Data (should not be committed)
+data/
+
+# W&B
+wandb/
+
+# IDE
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/

@@ -1,12 +1,12 @@
 # StatusKT: Tracing Mathematical Proficiency Through Problem-Solving Processes
 
-[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/)
-[![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/)
-[![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue)](https://iclr.cc/)
+[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2512.00311)
+[![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/jungypark/KT-PSP-25)
+[![ACL 2026 Findings](https://img.shields.io/badge/ACL%20Findings-2026-blue)](https://2026.aclweb.org/)
 
 > **Tracing Mathematical Proficiency Through Problem-Solving Processes**
 
-Official implementation of the StatusKT framework accepted at **ICLR 2026**.
+Official implementation of the StatusKT framework accepted at **ACL 2026 Findings**.
 
 *Jungyang Park, Suho Kang, Jaewoo Park, Jaehong Kim, Jaewoo Shin, Seonjoon Park, Youngjae Yu*
 
@@ -185,7 +185,7 @@ The StatusKT framework uses a three-stage LLM pipeline to extract MP signals:
 @inproceedings{park2026statuskt,
   title={Tracing Mathematical Proficiency Through Problem-Solving Processes},
   author={Park, Jungyang and Kang, Suho and Park, Jaewoo and Kim, Jaehong and Shin, Jaewoo and Park, Seonjoon and Yu, Youngjae},
-  booktitle={International Conference on Learning Representations (ICLR)},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
   year={2026}
 }
 ```

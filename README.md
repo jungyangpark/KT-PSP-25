@@ -1,6 +1,6 @@
 # StatusKT: Tracing Mathematical Proficiency Through Problem-Solving Processes
 
-[![Paper](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2512.00311)
+[![Paper](https://img.shields.io/badge/arXiv-2512.00311-b31b1b.svg)](https://arxiv.org/abs/2512.00311)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/jungypark/KT-PSP-25)
 [![ACL 2026 Findings](https://img.shields.io/badge/ACL%20Findings-2026-blue)](https://2026.aclweb.org/)
 

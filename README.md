@@ -42,6 +42,10 @@ StatusKT focuses on four observable dimensions of mathematical proficiency:
 ```
 KT-PSP-25/
 ├── README.md                   # This file
+├── mp_generation/              # MP extraction pipeline
+│   ├── 1_MP_indicator_gen.py  # Stage 1: Teacher LLM - Generate MP indicators
+│   ├── 2_MP_student_response.py # Stage 2: Student LLM - Generate responses
+│   └── 3_MP_teacher_eval.py   # Stage 3: Teacher LLM - Evaluate responses
 ├── pykt-toolkit/               # Modified pyKT library with MP support
 │   ├── pykt/
 │   │   ├── models/            # KT model implementations with MP integration
@@ -169,15 +173,36 @@ StatusKT consistently improves prediction performance over DLKT baselines:
 | Baseline (AUC) | 0.6165 | 0.6049 | 0.6201 | 0.6524 | 0.6591 | 0.6735 |
 | StatusKT (AUC) | **0.6197** | **0.6220** | **0.6401** | **0.6629** | **0.6639** | **0.6773** |
 
-## MP Generation Pipeline (Coming Soon)
+## MP Generation Pipeline
 
-The StatusKT framework uses a three-stage LLM pipeline to extract MP signals:
+The StatusKT framework uses a three-stage LLM pipeline to extract MP signals. See [`mp_generation/`](mp_generation/) for the full implementation.
 
-1. **Indicator Extraction (Teacher LLM)**: Generate problem-specific MP indicators
-2. **Response Generation (Student LLM)**: Generate responses based on student's PSP
-3. **Proficiency Assessment (Teacher LLM)**: Evaluate responses to produce MP ratios
+```
+┌─────────────────────┐     ┌─────────────────────┐     ┌─────────────────────┐
+│  1. Teacher LLM     │     │  2. Student LLM     │     │  3. Teacher LLM     │
+│  (Indicator Gen)    │ ──▶ │  (Response Gen)     │ ──▶ │  (Evaluation)       │
+└─────────────────────┘     └─────────────────────┘     └─────────────────────┘
+```
 
-*Note: The MP generation code will be released in a future update.*
+| Stage | Script | Description |
+|-------|--------|-------------|
+| 1 | `1_MP_indicator_gen.py` | Generate problem-specific MP indicators |
+| 2 | `2_MP_student_response.py` | Simulate student responses based on PSP |
+| 3 | `3_MP_teacher_eval.py` | Evaluate responses to produce MP ratios |
+
+### Quick Start
+
+```bash
+cd mp_generation
+
+# Set up your OpenAI API key
+export OPENAI_API_KEY=your_api_key_here
+
+# Run the pipeline
+python 1_MP_indicator_gen.py
+python 2_MP_student_response.py
+python 3_MP_teacher_eval.py
+```
 
 ## Citation
 
